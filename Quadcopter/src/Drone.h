@@ -15,7 +15,7 @@ private:
 //variables
 double prev_errorX = 0, prev_errorY = 0;
 double P = 0.1;//as P increases, power per angle increases 0.1
-double D = 8;//as D increases, slowing down force decreases 8
+double D = 8;//as D increases, the rate at which angular velocity changes will decrease 8
 double target_angleX_ = 0, target_angleY_ = 0;
 double elapsed_time_ = millis(), prev_elapsed_time_ = 0;
 //arrays
@@ -37,7 +37,7 @@ Drone(int m1_pin, int m2_pin, int m3_pin, int m4_pin, int tx, int rx, int set) :
 void setUP();
 /*For debuging*/
 void serialDebug();
-/*This will receive the latest remotecontroler instructions and store it in channel array.
+/*This will receive the latest remote instructions and store it in channel array.
 If the HC12 does not receve instruction, in a given time, it will set all the channels to 0.*/
 void getHC12Instruction();
 /*This will adjust the motor values to balance the drone and follow the users instructions*/
