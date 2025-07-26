@@ -23,7 +23,7 @@ void hc12::exitSettings(){
     changeSettingStatus(0);
     return;
 }
-void hc12::changeBaud(String num){//change the baud (transmition rate)
+void hc12::changeBaud(String num){//change the baud (transmission rate)
     changeSettings();
     SoftwareSerial::print("AT+B" + num);
     delay(200);
@@ -31,7 +31,7 @@ void hc12::changeBaud(String num){//change the baud (transmition rate)
     exitSettings();
     return;
 }
-void hc12::changeTPowerConsumption(String num){//change the transmittion power level (range)
+void hc12::changeTPowerConsumption(String num){//change the transmission power level (range)
     changeSettings();
     SoftwareSerial::print("AT+P" + num);
     delay(200);
@@ -82,6 +82,6 @@ void hc12::printHC12Data(){
 void hc12::transmitByte(byte val){
     write(val);
 }
-void hc12::transmiteChar(char val){
+void hc12::transmitChar(char val){
     write(val);
 }
