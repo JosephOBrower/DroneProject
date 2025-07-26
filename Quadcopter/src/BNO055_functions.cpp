@@ -32,12 +32,12 @@ void BNO055::getXYAngle(double &ax, double &ay){
     double gx, gy, gz, angle_x, angle_y;
     getRawGyrXYZ(gx, gy, gz);
     getAccXYAngle(angle_x, angle_y);
-    //complemenrty + lowpass filter
+    //complementary + moving average filter
     /*angle_x_past_ = (angle_x_past_ + ((angle_x_past_ + gx * dt) * ratio_gyro_ + (angle_x) * ratio_acc_)) / 2;
     ax = angle_x_past_;
     angle_y_past_ = (angle_y_past_ + ((angle_y_past_ + gy * dt) * ratio_gyro_ + (angle_y) * ratio_acc_)) / 2;
     ay = angle_y_past_;*/
-    //complementry filter
+    //complementary filter
     angle_x_past_ = ((angle_x_past_ + gx * dt) * ratio_gyro_ + (angle_x) * ratio_acc_);
     ax = angle_x_past_;
     angle_y_past_ = ((angle_y_past_ + gy * dt) * ratio_gyro_ + (angle_y) * ratio_acc_);
@@ -54,12 +54,12 @@ void BNO055::getXYAngle(double &ax, double &ay, double &gx, double &gy){
     double gz, angle_x, angle_y;
     getRawGyrXYZ(gx, gy, gz);
     getAccXYAngle(angle_x, angle_y);
-    //complemenrty + lowpass filter
+    //complementary + moving average filter
     /*angle_x_past_ = (angle_x_past_ + ((angle_x_past_ + gx * dt) * ratio_gyro_ + (angle_x) * ratio_acc_)) / 2;
     ax = angle_x_past_;
     angle_y_past_ = (angle_y_past_ + ((angle_y_past_ + gy * dt) * ratio_gyro_ + (angle_y) * ratio_acc_)) / 2;
     ay = angle_y_past_;*/
-    //complementry filter
+    //complementary filter
     angle_x_past_ = ((angle_x_past_ + gx * dt) * ratio_gyro_ + (angle_x) * ratio_acc_);
     ax = angle_x_past_;
     angle_y_past_ = ((angle_y_past_ + gy * dt) * ratio_gyro_ + (angle_y) * ratio_acc_);
