@@ -3,9 +3,9 @@
     the set pin is connected to ground. Here are some AT commands:
         "AT"    HC12 will return 'OK' indicating that it is in the settings mode
         "AT+Bxxxx"  Changes the baud rate. Increasing the baud rate decreases
-            transmition time, but lowers the distance that it can transmit
+            transmission time, but lowers the distance that it can transmit
         "AT+Cxxx" Changes the channel. 
-        "AT+Px" Changes the transmition power. The higher the power the longer the
+        "AT+Px" Changes the transmission power. The higher the power the longer the
             distance.
         ""*/
 
