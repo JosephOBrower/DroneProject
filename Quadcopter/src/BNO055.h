@@ -16,7 +16,7 @@ public:
     void getAccXYAngle(double &ax, double &ay);
     void getXYAngle(double &ax, double &ay);
     void getXYAngle(double &ax, double &ay, double &gx, double &gy);
-    //class varuables
+    //class variables
 
 private:
     Adafruit_BNO055 imu_;
