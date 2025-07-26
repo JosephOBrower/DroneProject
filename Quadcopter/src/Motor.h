@@ -2,7 +2,7 @@
 //#include <Servo.h>
 /**
  * @brief This will control the motors using a pwm signal. 
- * Main.cpp controls the motor's speed by inputing values
+ * Main.cpp controls the motor's speed by inputting values
  * from 0% and 100% (0-100)
  * @attention You must send an analogWrite signal between
  * 130-240 to run the motors
