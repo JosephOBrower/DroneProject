@@ -1,10 +1,8 @@
 #include "Drone.h"
 /*Notes: 
-#1 If the motors randomly go form 0% to 100% for half a second or your experiencing weird motor ticking 
-  noises then your batteries are most likely low
-#2 For every serial.print call the loop iteration speed will decrease by 6ms!
-#3 Make sure that your throttle position is at the 0 position BEFORE you turn on the drone ;D
-#4 The red LED light must be off before you move the throttle
+#1 For every serial.print call the loop iteration speed will decrease by 6ms!
+#2 Make sure that your throttle position is at the 0 position BEFORE you turn on the drone ;D
+#3 The red LED light must be off before you move the throttle
 */
 //the motor pins should be 11, 10, 9, 3
 Drone drone(3, 9, 10, 11, 5, 6, 4);
