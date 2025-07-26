@@ -35,7 +35,7 @@ void testHC12();//if prints "OK" everything is connected and working
 void begin();
 void printHC12Data();
 void transmitByte(byte val);
-void transmiteChar(char val);
+void transmitChar(char val);
 private:
 //setters
 void changeSettingStatus(bool status){changeSettings_ = status;};
